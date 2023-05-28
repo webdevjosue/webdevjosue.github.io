@@ -1,8 +1,89 @@
-/* #create styles.css for index.html source code lang=eng, title:  Web Development Josue Zazueta Portfolio - Projects, commission request,
-      contact, design philosophy, github, youtuber, and more. using bem methodology,  add accessibility,  add: navigation: about, contact, commission, projects,  footer design copyright. Author: Josue Zazueta
-modern design example: apple, google, guidelines following material designs and
-apple design philosophy. */ 
+/*Web Development Josue Zazueta Portfolio - Projects, commission request, contact, design philosophy, github, youtuber, and more. using bem methodology, add accessibility, add: navigation: about, contact, commission, projects, footer design copyright. Author: Josue Zazueta modern design example: apple, google, guidelines following material designs and apple design philosophy. */
 
-/* #create styles.css for index.html source code lang=eng, title:  Web Development Josue Zazueta Portfolio - Projects, commission request,
-      contact, design philosophy, github, youtuber, and more. using bem methodology,  add accessibility,  add: navigation: about, contact, commission, projects,  footer design copyright.  
-      
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a base font size and font family */
+body {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Style the header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #fff;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the logo */
+.header__logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Style the main heading */
+.heading-primary {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Style the sub heading */
+.heading-primary--sub {
+  font-size: 1.5em;
+  color: #777;
+}
+
+/* Style the navigation links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Style the button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #777;
+}
+
+/* Style the main sections */
+.section-about,
+.section-projects {
+  padding: 50px 30px;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 50px;
+}
