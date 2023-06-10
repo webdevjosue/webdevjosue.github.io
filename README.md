@@ -20,7 +20,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: I may be the Evil Twin or the Good Twin. 
 -->
 
-started:
+Information About this Repo:
 
 - 🔭 I’m currently working on Portfolio Page for Github, 2 Coffee Shop Website, and Ai Art Community Blender Gallery
 
