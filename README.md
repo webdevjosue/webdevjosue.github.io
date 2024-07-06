@@ -5,33 +5,34 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on Github Portfolio, Xicali Ramen, Pepe Web Tech, and More...
+- 🔭 Learning Github Pages using Jekyll to create Portfolio to show off variety of next creations: Xicali Ramen, Pepe Web Tech, and More.
 
-- 🌱 I’m learning LLM's use case for making videos, music, sounds, art, and so much more.
+- 🌱 Learning LLM's use case for making videos, music, sounds, art, and so much more.
 
-- 👯 I’m looking to collaborate on Web, Apps, Design, and Project Launching.
+- 👯 Searching collaborate on Web, Apps, Design, and Project Launching.
 
-- 🤔 I’m looking for help with networking with those who are freelancer, enthuthiast, creatives, and creators.
+- 🤔 Searching for help with networking with freelancer, enthuthiast, creatives, and creators.
 
 - 💬 Lets Talk! techonology, collaboration, or business opportunities in the San Diego Region.
 
 - 📫 Reach me: Email: WebDev.Josue@gmail.com
 
-- ⚡ Fun fact: I may be the Evil Twin or the Good Twin.
+- ⚡ Fun fact: Chihuahua's are the Strongest Dogs in the World. :)
+
 -->
 
 Information About this Repo:
 
-- 🔭 I’m currently working on Portfolio Page for Github, 2 Coffee Shop Website, and Ai Art Community Blender Gallery
+- 🔭 Learning Github Pages using Jekyll to create Portfolio to show off variety of next creations: Xicali Ramen, Pepe Web Tech, and More.
 
-- 🌱 I’m currently learning LLM's use case for making videos, music, sounds, art, and so much more.
+- 🌱 Learning LLM's use case for making videos, music, sounds, art, and so much more.
 
-- 👯 I’m looking to collaborate on Web, Apps, Design, and Project Launching.
+- 👯 Searching collaborate on Web, Apps, Design, and Project Launching.
 
-- 🤔 I’m looking for help with networking with those who are freelancer, enthuthiast, creatives, and creators.
+- 🤔 Searching for help with networking with freelancer, enthuthiast, creatives, and creators.
 
-- 💬 Ask me about techonology, collaboration, or business opportunities.
+- 💬 Lets Talk! techonology, collaboration, or business opportunities in the San Diego Region.
 
-- 📫 How to reach me: Email: WebDev.Josue@gmail.com
+- 📫 Reach me: Email: WebDev.Josue@gmail.com
 
-- ⚡ Fun fact: I may be the Evil Twin or the Good Twin.
+- ⚡ Fun fact: Chihuahua's are the Strongest Dogs in the World. :)
