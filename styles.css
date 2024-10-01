@@ -25,6 +25,8 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
   max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .hero-text {
@@ -93,6 +95,8 @@ footer {
   .hero-image {
     height: 30vh;
     margin: 10px auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .hero-text h1 {
