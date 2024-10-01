@@ -106,26 +106,31 @@
             </p>
             <p class="text-secondary text-lg mb-4">
               📫 Reach me:
-              <a
-                href="mailto:WebDev.Josue@gmail.com"
-                class="text-primary hover:underline transition duration-300 ease-in-out"
-                >WebDev.Josue@gmail.com</a
+              <span
+                id="obfuscated-email"
+                class="text-primary hover:underline transition duration-300 ease-in-out cursor-pointer"
+                data-email="V2ViRGV2LkpPc3VlQGdtYWlsLmNvbQ=="
+                onclick="deobfuscateEmail()"
+                >Click to reveal email</span
               >
             </p>
             <form id="contact-form" class="space-y-4">
               <input
                 type="text"
+                name="name"
                 placeholder="Name"
                 class="w-full p-2 border rounded"
                 required
               />
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
                 class="w-full p-2 border rounded"
                 required
               />
               <textarea
+                name="message"
                 placeholder="Message"
                 class="w-full p-2 border rounded"
                 rows="4"

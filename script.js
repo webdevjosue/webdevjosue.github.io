@@ -24,9 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    // For now, we'll just log it to the console
-    console.log("Form submitted");
+    // Here you can add your own form submission logic
+    // For now, we'll just show an alert
     alert("Thank you for your message! We will get back to you soon.");
     contactForm.reset();
   });
@@ -34,3 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Show the initial card (About)
   showCard("about");
 });
+
+// Function to decode base64 encoded email
+function decodeEmail(encodedEmail) {
+  return atob(encodedEmail);
+}
+
+// Function to deobfuscate and display the email
+function deobfuscateEmail() {
+  const emailSpan = document.getElementById("obfuscated-email");
+  const encodedEmail = emailSpan.getAttribute("data-email");
+  const decodedEmail = decodeEmail(encodedEmail);
+  emailSpan.textContent = decodedEmail;
+  emailSpan.setAttribute("href", `mailto:${decodedEmail}`);
+  emailSpan.removeAttribute("onclick");
+}

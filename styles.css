@@ -26,12 +26,17 @@ body {
 
 .nav-btn {
   transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  border-radius: 20px;
+  background-color: #00008b; /* Dark Blue */
+  color: white !important;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
 }
 
 .nav-btn:hover,
 .nav-btn.active {
-  border-bottom-color: #3f51b5;
+  background-color: #ffa500; /* Orange */
+  color: white !important;
 }
 
 .card {
