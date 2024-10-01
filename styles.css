@@ -25,9 +25,199 @@ body {
   border: 4px solid white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
-  max-width: 100%;
+  max-width:   body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content-wrapper {
+    flex: 1 0 auto;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  .hero-image {
+    background-image: url("https://source.unsplash.com/random/1600x900?nature");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    position: relative;
+    border: 4px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 960px; /* Set a maximum width */
+    width: 100%; /* Ensure it takes full width up to the max-width */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 165, 0, 0.7); /* Orange transparent background */
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .nav-btn-container {
+    display: flex;
+    justify-content: space-around; /* Evenly space the buttons */
+    align-items: center;
+    margin: 1rem auto; /* Center the container */
+    padding: 1rem;
+    background-color: #ffffff; /* Match the card background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Match the card shadow */
+    border-radius: 0.5rem; /* Match the card border radius */
+    max-width: 960px; /* Set a maximum width */
+    width: 100%; /* Ensure it takes full width up to the max-width */
+  }
+  
+  .nav-btn {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    background-color: #00008b; /* Dark Blue */
+    color: white !important;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-btn:hover,
+  .nav-btn.active {
+    background-color: #ffa500; /* Orange */
+    color: white !important;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 960px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .card {
+    flex: 1 1 calc(33.333% - 1rem); /* Adjust width to fit within the container */
+    margin: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #contact-form button {
+    cursor: pointer;
+  }
+  
+  footer {
+    flex-shrink: 0;
+    background-color: #3f51b5; /* Change to a more visually appealing color */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 640px) {
+    .container {
+      padding: 0 15px;
+    }
+  
+    .hero-image {
+      height: 30vh;
+      margin: 10px auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .hero-text h1 {
+      font-size: 1.5rem;
+    }
+  
+    .nav-btn-container {
+      margin: 0.5rem 0;
+      flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+  
+    .nav-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem; /* Adjusted padding */
+      margin: 0.25rem; /* Adjusted margin */
+      width: 100%; /* Full width buttons on small screens */
+    }
+  
+    .card {
+      flex: 1 1 100%; /* Full width cards on small screens */
+    }
+  }960px; /* Set a maximum width */
+  width: 100%; /* Ensure it takes full width up to the max-width */
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 165, 0, 0.7); /* Orange transparent background */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.nav-btn-container {
+  display: flex;
+  justify-content: space-around; /* Evenly space the buttons */
+  align-items: center;
+  margin: 1rem auto; /* Center the container */
+  padding: 1rem;
+  background-color: #ffffff; /* Match the card background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Match the card shadow */
+  border-radius: 0.5rem; /* Match the card border radius */
+  max-width: 960px; /* Set a maximum width */
+  width: 100%; /* Ensure it takes full width up to the max-width */
+} border-radius: 0.5rem; /* Match the card border radius */
+  max-width: 960px; /* Set a maximum width */
+  width: 100%; /* Ensure it takes full width up to the max-width */
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: #3f51b5; /* Change to a more visually appealing color */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .hero-text {
@@ -43,8 +233,14 @@ body {
 }
 
 .nav-btn-container {
-  text-align: center;
+  display: flex;
+  justify-content: space-around; /* Evenly space the buttons */
+  align-items: center;
   margin: 1rem 0;
+  padding: 1rem;
+  background-color: #ffffff; /* Match the card background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Match the card shadow */
+  border-radius: 0.5rem; /* Match the card border radius */
 }
 
 .nav-btn {
@@ -116,10 +312,13 @@ footer {
 
   .nav-btn-container {
     margin: 0.5rem 0;
+    flex-direction: column; /* Stack buttons vertically on small screens */
   }
 
   .nav-btn {
     font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem; /* Adjusted padding */
+    margin: 0.25rem; /* Adjusted margin */
+    width: 100%; /* Full width buttons on small screens */
   }
 }
