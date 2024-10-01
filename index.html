@@ -4,67 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebDevJosue</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: #f0f0f0;
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-      }
-      .card {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-        max-width: 600px;
-        text-align: center;
-      }
-      h1 {
-        margin-top: 0;
-        font-size: 2.5em;
-        color: #3f51b5;
-      }
-      p {
-        font-size: 1.2em;
-        color: #757575;
-      }
-      a {
-        color: #3f51b5;
-        text-decoration: none;
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3f51b5",
+              secondary: "#757575",
+              background: "#f5f5f5",
+              surface: "#ffffff",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <div class="card">
-      <h1>I'm Josue Zazueta</h1>
-      <h1>Hi there 👋</h1>
-      <p>
-        🔭 Learning Github Pages using Jekyll to create Portfolio to show off a
-        variety of next Projects: Personal Portfolio, Pepe Web Tech, and more.
-      </p>
-      <p>
-        🌱 Learning LLM's use case for making videos, music, sounds, art, and so
-        much more.
-      </p>
-      <p>
-        👯 Searching to collaborate on Web, Apps, Design, and Project Launching.
-      </p>
-      <p>
-        🤔 Searching for help with networking with freelancers, enthusiasts,
-        creatives, and creators.
-      </p>
-      <p>
-        💬 Let's Talk! Technology, collaboration, or business opportunities in
-        the San Diego Region.
-      </p>
-      <p>
-        📫 Reach me:
-        <a href="mailto:WebDev.Josue@gmail.com">WebDev.Josue@gmail.com</a>
-      </p>
-      <p>⚡ Fun fact: Chihuahuas are the Strongest Dogs in the World. :)</p>
+  <body
+    class="bg-background flex justify-center items-center min-h-screen p-4 font-sans"
+  >
+    <div
+      class="bg-surface rounded-lg shadow-lg p-8 md:p-12 max-w-2xl w-full border border-gray-200"
+    >
+      <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">
+        I'm Josue Zazueta
+      </h1>
+      <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8">
+        Hi there 👋
+      </h2>
+      <div class="space-y-6">
+        <p class="text-secondary text-lg">
+          🔭 Here Learning Github Pages using Jekyll to create Portfolio to show
+          off a variety of next Projects:
+          <a
+            href="https://josuezazueta.com"
+            class="text-primary hover:underline"
+            >Personal Portfolio</a
+          >,
+          <a href="https://pepewebtech.com" class="text-primary hover:underline"
+            >Pepe Web Tech</a
+          >, and more.
+        </p>
+        <p class="text-secondary text-lg">
+          🌱 Learning LLM's use case for making videos, music, sounds, art, and
+          so much more.
+        </p>
+        <p class="text-secondary text-lg">
+          👯 Searching to collaborate on Web, Apps, Design, and Project
+          Launching.
+        </p>
+        <p class="text-secondary text-lg">
+          🤔 Searching for help with networking with freelancers, enthusiasts,
+          creatives, and creators.
+        </p>
+        <p class="text-secondary text-lg">
+          💬 Let's Talk! Technology, collaboration, or business opportunities in
+          the San Diego Region.
+        </p>
+        <p class="text-secondary text-lg">
+          📫 Reach me:
+          <a
+            href="mailto:WebDev.Josue@gmail.com"
+            class="text-primary hover:underline transition duration-300 ease-in-out"
+            >WebDev.Josue@gmail.com</a
+          >
+        </p>
+        <p class="text-secondary text-lg">
+          ⚡ Fun fact: Chihuahuas are the Strongest Dogs in the World. :)
+        </p>
+      </div>
     </div>
   </body>
 </html>
