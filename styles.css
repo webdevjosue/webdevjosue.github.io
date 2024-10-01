@@ -9,17 +9,19 @@ body {
   background-position: center;
   height: 40vh;
   position: relative;
+  border: 4px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px 10px;
 }
 
 .hero-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 20px;
+  right: 20px;
+  text-align: right;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -31,12 +33,14 @@ body {
   color: white !important;
   padding: 0.5rem 1rem;
   margin: 0 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-btn:hover,
 .nav-btn.active {
   background-color: #ffa500; /* Orange */
   color: white !important;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .card {
@@ -66,6 +70,7 @@ body {
 @media (max-width: 640px) {
   .hero-image {
     height: 30vh;
+    margin: 10px 5px;
   }
 
   .hero-text h1 {
