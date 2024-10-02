@@ -60,94 +60,110 @@
             </button>
           </div>
         </nav>
-        <div class="bg-surface rounded-lg shadow-lg p-8 max-w-3xl mx-auto mt-8">
-          <div id="card-container">
-            <div class="card" id="about">
-              <h2 class="text-3xl font-semibold text-primary mb-6">
-                Hi there 👋
+        <div class="card-container mx-auto mt-8">
+          <div id="card-content" class="grid gap-8">
+            <div
+              class="card bg-white rounded-lg shadow-md overflow-hidden"
+              id="about"
+            >
+              <h2 class="text-2xl font-semibold text-primary p-6 bg-gray-50">
+                About Me
               </h2>
-              <p class="text-secondary text-lg mb-4">
-                🔭 Here Learning Github Pages using Jekyll to create Portfolio
-                to show off a variety of next Projects:
-                <a
-                  href="https://josuezazueta.com"
-                  class="text-primary hover:underline"
-                  >Personal Portfolio</a
-                >,
-                <a
-                  href="https://pepewebtech.com"
-                  class="text-primary hover:underline"
-                  >Pepe Web Tech</a
-                >, and more.
-              </p>
-              <p class="text-secondary text-lg">
-                ⚡ Fun fact: Chihuahuas are the Strongest Dogs in the World. :)
-              </p>
+              <div class="p-6">
+                <p class="text-secondary mb-4">
+                  🔭 Here Learning Github Pages using Jekyll to create Portfolio
+                  to show off a variety of next Projects:
+                  <a
+                    href="https://josuezazueta.com"
+                    class="text-primary hover:underline"
+                    >Personal Portfolio</a
+                  >,
+                  <a
+                    href="https://pepewebtech.com"
+                    class="text-primary hover:underline"
+                    >Pepe Web Tech</a
+                  >, and more.
+                </p>
+                <p class="text-secondary">
+                  ⚡ Fun fact: Chihuahuas are the Strongest Dogs in the World.
+                  :)
+                </p>
+              </div>
             </div>
-            <div class="card" id="projects">
-              <h2 class="text-3xl font-semibold text-primary mb-6">
+            <div
+              class="card bg-white rounded-lg shadow-md overflow-hidden"
+              id="projects"
+            >
+              <h2 class="text-2xl font-semibold text-primary p-6 bg-gray-50">
                 Projects & Skills
               </h2>
-              <p class="text-secondary text-lg mb-4">
-                🌱 Learning LLM's use case for making videos, music, sounds,
-                art, and so much more.
-              </p>
-              <p class="text-secondary text-lg mb-4">
-                👯 Searching to collaborate on Web, Apps, Design, and Project
-                Launching.
-              </p>
-              <p class="text-secondary text-lg">
-                🤔 Searching for help with networking with freelancers,
-                enthusiasts, creatives, and creators.
-              </p>
+              <div class="p-6">
+                <p class="text-secondary mb-4">
+                  🌱 Learning LLM's use case for making videos, music, sounds,
+                  art, and so much more.
+                </p>
+                <p class="text-secondary mb-4">
+                  👯 Searching to collaborate on Web, Apps, Design, and Project
+                  Launching.
+                </p>
+                <p class="text-secondary">
+                  🤔 Searching for help with networking with freelancers,
+                  enthusiasts, creatives, and creators.
+                </p>
+              </div>
             </div>
-            <div class="card" id="contact">
-              <h2 class="text-3xl font-semibold text-primary mb-6">
+            <div
+              class="card bg-white rounded-lg shadow-md overflow-hidden"
+              id="contact"
+            >
+              <h2 class="text-2xl font-semibold text-primary p-6 bg-gray-50">
                 Contact Us
               </h2>
-              <p class="text-secondary text-lg mb-4">
-                💬 Let's Talk! Technology, collaboration, or business
-                opportunities in the San Diego Region.
-              </p>
-              <p class="text-secondary text-lg mb-4">
-                📫 Reach me:
-                <span
-                  id="obfuscated-email"
-                  class="text-primary hover:underline transition duration-300 ease-in-out cursor-pointer"
-                  data-email="V2ViRGV2LkpPc3VlQGdtYWlsLmNvbQ=="
-                  onclick="deobfuscateEmail()"
-                  >Click to reveal email</span
-                >
-              </p>
-              <form id="contact-form" class="space-y-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  class="w-full p-2 border rounded"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  class="w-full p-2 border rounded"
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  class="w-full p-2 border rounded"
-                  rows="4"
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition"
-                >
-                  Send
-                </button>
-              </form>
+              <div class="p-6">
+                <p class="text-secondary mb-4">
+                  💬 Let's Talk! Technology, collaboration, or business
+                  opportunities in the San Diego Region.
+                </p>
+                <p class="text-secondary mb-4">
+                  📫 Reach me:
+                  <span
+                    id="obfuscated-email"
+                    class="text-primary hover:underline cursor-pointer"
+                    data-email="V2ViRGV2Lkpvc3VlQGdtYWlsLmNvbQ=="
+                  >
+                    Click to reveal email
+                  </span>
+                </p>
+                <form id="contact-form" class="space-y-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    class="w-full p-2 border rounded"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    class="w-full p-2 border rounded"
+                    required
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    class="w-full p-2 border rounded"
+                    rows="4"
+                    required
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

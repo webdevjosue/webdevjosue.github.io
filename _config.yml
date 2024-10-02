@@ -1,0 +1,7 @@
+title: Josue Zazueta
+description: Web Developer Portfolio
+url: "https://webdevjosue.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
