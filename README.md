@@ -23,7 +23,7 @@ Here are some ideas to get you started:
 
 Information About this Repo:
 
-- 🔭 Learning Github Pages using Jekyll to create Portfolio to show off variety of next creations: Xicali Ramen, Pepe Web Tech, and More.
+- 🔭 Learning Github Pages using Jekyll to create Portfolio to show off variety of next creations: Portfolio, Pepe Web Tech, and More.
 
   🌱 Learning LLM's use case for making videos, music, sounds, art, and so much more.
 
