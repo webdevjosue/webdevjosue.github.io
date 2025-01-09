@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Josue Zazueta</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Blinking effect */
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .blinking {
+        animation: blink 1s infinite;
+      }
+      .dropdown {
+        display: none;
+      }
+      .dropdown.show {
+        display: block;
+      }
+    </style>
   </head>
   <body class="bg-white font-sans">
     <!-- Header Section -->
@@ -15,21 +32,30 @@
     <!-- Navigation Section -->
     <nav class="text-center my-4">
       <button
-        class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold"
+        id="selectButton"
+        class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold blinking"
       >
         Select
       </button>
-      <ul class="mt-4 space-y-2">
+      <ul id="dropdownMenu" class="dropdown mt-4 space-y-2">
         <li>
-          <a href="#about" class="text-xl font-bold hover:underline">About</a>
+          <a
+            href="#about"
+            class="text-xl font-bold hover:bg-green-200 block py-1"
+            >About</a
+          >
         </li>
         <li>
-          <a href="#projects" class="text-xl font-bold hover:underline"
+          <a
+            href="#projects"
+            class="text-xl font-bold hover:bg-green-200 block py-1"
             >Projects</a
           >
         </li>
         <li>
-          <a href="#contact" class="text-xl font-bold hover:underline"
+          <a
+            href="#contact"
+            class="text-xl font-bold hover:bg-green-200 block py-1"
             >Contact</a
           >
         </li>
@@ -70,5 +96,41 @@
     <footer class="text-center py-4 bg-gray-100 mt-8">
       <p class="text-gray-600">Josue Zazueta LLC (c)</p>
     </footer>
+
+    <script>
+      const selectButton = document.getElementById("selectButton");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      // Stop blinking on hover, then resume blinking after hover ends
+      selectButton.addEventListener("mouseover", () => {
+        selectButton.classList.remove("blinking");
+      });
+
+      selectButton.addEventListener("mouseout", () => {
+        if (!dropdownMenu.classList.contains("show")) {
+          selectButton.classList.add("blinking");
+        }
+      });
+
+      // Toggle dropdown menu on click
+      selectButton.addEventListener("click", () => {
+        selectButton.classList.toggle("bg-green-700"); // Darker color on click
+        dropdownMenu.classList.toggle("show");
+        if (!dropdownMenu.classList.contains("show")) {
+          selectButton.classList.add("blinking");
+        } else {
+          selectButton.classList.remove("blinking");
+        }
+      });
+
+      // Highlight select when hovering over menu items
+      dropdownMenu.addEventListener("mouseover", () => {
+        selectButton.classList.add("bg-green-200");
+      });
+
+      dropdownMenu.addEventListener("mouseout", () => {
+        selectButton.classList.remove("bg-green-200");
+      });
+    </script>
   </body>
 </html>
