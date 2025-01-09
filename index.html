@@ -18,119 +18,112 @@
       .dropdown {
         display: none;
       }
-      .dropdown.show {
+      input:checked ~ .dropdown {
         display: block;
+      }
+      .dropdown a:hover {
+        background-color: #bbf7d0;
+      }
+      .select-button:hover {
+        animation: none;
       }
     </style>
   </head>
   <body class="bg-white font-sans">
-    <!-- Header Section -->
-    <header class="text-center py-4">
-      <h1 class="text-4xl font-bold">Josue Zazueta</h1>
-    </header>
+    <div class="max-w-5xl mx-auto px-4">
+      <!-- Header Section -->
+      <header class="text-center py-6 md:py-8">
+        <h1 class="text-4xl md:text-5xl font-bold">Josue Zazueta</h1>
+      </header>
 
-    <!-- Navigation Section -->
-    <nav class="text-center my-4">
-      <button
-        id="selectButton"
-        class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold blinking"
-      >
-        Select
-      </button>
-      <ul id="dropdownMenu" class="dropdown mt-4 space-y-2">
-        <li>
-          <a
-            href="#about"
-            class="text-xl font-bold hover:bg-green-200 block py-1"
-            >About</a
+      <!-- Hero and Navigation Section -->
+      <div class="flex justify-center py-8">
+        <div
+          class="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8"
+        >
+          <!-- Hero Image Section -->
+          <div class="w-32 md:w-40 lg:w-48">
+            <img
+              src="https://avatars.githubusercontent.com/u/102708510"
+              alt="Avatar"
+              class="rounded-full shadow-lg w-full h-auto"
+            />
+          </div>
+
+          <!-- Navigation Section -->
+          <nav class="relative">
+            <label class="inline-block">
+              <input type="checkbox" class="hidden peer" />
+              <div
+                class="select-button bg-green-600 text-white px-8 py-4 rounded-lg font-semibold blinking cursor-pointer hover:bg-green-700 transition-colors w-48 text-center"
+              >
+                Select
+              </div>
+              <ul
+                class="dropdown mt-2 bg-white border rounded-lg shadow-lg w-48 absolute left-0 z-10"
+              >
+                <li>
+                  <a
+                    href="#about"
+                    class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
+                    >Projects</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </label>
+          </nav>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <section id="about" class="py-8 md:py-16 px-4 md:px-8 max-w-4xl mx-auto">
+        <div class="text-center space-y-6">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">
+            Project: ZJ
+          </h2>
+          <p
+            class="text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
           >
-        </li>
-        <li>
-          <a
-            href="#projects"
-            class="text-xl font-bold hover:bg-green-200 block py-1"
-            >Projects</a
-          >
-        </li>
-        <li>
-          <a
-            href="#contact"
-            class="text-xl font-bold hover:bg-green-200 block py-1"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
+            🔭 Learning Github Pages using Jekyll to create Portfolio to show
+            off variety of next creations: Portfolio, Pepe Web Tech, and More.
+            🌱 Learning LLM's use case for making videos, music, sounds, art,
+            and so much more. 👯 Searching collaborate on Web, Apps, Design, and
+            Project Launching. 🤔 Searching for help with networking with
+            freelancer, enthusiasts, creatives, and creators. 💬 Let's Talk!
+            Technology, collaboration, or business opportunities in the San
+            Diego Region. 📫 Reach me: Email: WebDev.Josue@gmail.com ⚡ Fun
+            fact: Chihuahuas are the Strongest Dogs in the World. :)
+          </p>
+        </div>
+      </section>
 
-    <!-- Hero Image Section -->
-    <section class="text-center py-8">
-      <img
-        src="https://via.placeholder.com/150"
-        alt="Avatar"
-        class="mx-auto rounded-full shadow-md"
-      />
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-8 text-center">
-      <h2 class="text-2xl font-bold">Project: ZJ</h2>
-      <p class="text-gray-700 mt-4 leading-relaxed px-4">
-        Developer, Creative, idea maker, Chef, Cook, Baker, gamer, player,
-        hypeman. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-        lacus vel facilisis.
-      </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="text-center py-8">
-      <a
-        href="#"
-        class="bg-green-600 text-white px-6 py-3 rounded-lg text-xl font-bold hover:bg-green-700"
-        >Contact</a
-      >
-    </section>
+      <!-- Contact Section -->
+      <section id="contact" class="text-center py-8 md:py-12">
+        <a
+          href="#"
+          class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg text-lg md:text-xl font-bold hover:bg-green-700 transition-colors"
+          >Contact</a
+        >
+      </section>
+    </div>
 
     <!-- Footer Section -->
-    <footer class="text-center py-4 bg-gray-100 mt-8">
+    <footer class="text-center py-6 bg-gray-100 mt-8">
       <p class="text-gray-600">Josue Zazueta LLC (c)</p>
     </footer>
-
-    <script>
-      const selectButton = document.getElementById("selectButton");
-      const dropdownMenu = document.getElementById("dropdownMenu");
-
-      // Stop blinking on hover, then resume blinking after hover ends
-      selectButton.addEventListener("mouseover", () => {
-        selectButton.classList.remove("blinking");
-      });
-
-      selectButton.addEventListener("mouseout", () => {
-        if (!dropdownMenu.classList.contains("show")) {
-          selectButton.classList.add("blinking");
-        }
-      });
-
-      // Toggle dropdown menu on click
-      selectButton.addEventListener("click", () => {
-        selectButton.classList.toggle("bg-green-700"); // Darker color on click
-        dropdownMenu.classList.toggle("show");
-        if (!dropdownMenu.classList.contains("show")) {
-          selectButton.classList.add("blinking");
-        } else {
-          selectButton.classList.remove("blinking");
-        }
-      });
-
-      // Highlight select when hovering over menu items
-      dropdownMenu.addEventListener("mouseover", () => {
-        selectButton.classList.add("bg-green-200");
-      });
-
-      dropdownMenu.addEventListener("mouseout", () => {
-        selectButton.classList.remove("bg-green-200");
-      });
-    </script>
   </body>
 </html>
