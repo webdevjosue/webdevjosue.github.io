@@ -1,0 +1,29 @@
+title: "Josue Zazueta's Portfolio"
+description: "Welcome to the portfolio of Josue Zazueta, showcasing projects and contact information."
+baseurl: ""
+url: "http://yourdomain.com"
+theme: "minimal"
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - _posts/*
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
