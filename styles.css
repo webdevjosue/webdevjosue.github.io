@@ -1,4 +1,304 @@
+/* Global Styles */
 body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 960px;/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+}
+
+/* Navigation Button Styles */
+.nav-btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem; /* Adjusted padding */
+  margin: 0.25rem; /* Adjusted margin */
+  width: 100%; /* Full width buttons on small screens */
+  background-color: #007aff; /* Apple blue color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-btn:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Additional Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.header__logo-box {
+  flex: 0 0 auto;
+}
+
+.header__logo {
+  height: 4rem;
+}
+
+.header__text-box {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+.heading-primary {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer Styles */
+footer {
+  flex-shrink: 0;
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 15px;
+  }
+  .hero-image {
+    height: 30vh;
+    margin: 10px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+  .nav-btn-container {
+    margin: 0.5rem 0;
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+  .nav-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem; /* Adjusted padding */
+    margin: 0.25rem; /* Adjusted margin */
+    width: 100%; /* Full width buttons on small screens */
+  }
+}
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Navigation Button Styles */
+.nav-btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem; /* Adjusted padding */
+  margin: 0.25rem; /* Adjusted margin */
+  width: 100%; /* Full width buttons on small screens */
+  background-color: #007aff; /* Apple blue color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-btn:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Additional Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo-box {
+  flex: 0 0 auto;
+}
+
+.header__logo {
+  height: 4rem;
+}
+
+.header__text-box {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+.heading-primary {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Navigation Button Styles */
+.nav-btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem; /* Adjusted padding */
+  margin: 0.25rem; /* Adjusted margin */
+  width: 100%; /* Full width buttons on small screens */
+  background-color: #007aff; /* Apple blue color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-btn:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Additional Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo-box {
+  flex: 0 0 auto;
+}
+
+.header__logo {
+  height: 4rem;
+}
+
+.header__text-box {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+.heading-primary {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}body {
   font-family: "Roboto", sans-serif;
   background-color: #f5f5f5;
   display: flex;
