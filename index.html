@@ -15,17 +15,27 @@
       .blinking {
         animation: blink 1s infinite;
       }
-      .nav-container:not(:focus-within) .dropdown {
-        display: none;
-      }
       .dropdown {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, visibility 0.2s;
+      }
+      #nav-toggle:checked ~ .dropdown {
         display: block;
+        opacity: 1;
+        visibility: visible;
       }
       .dropdown a:hover {
         background-color: #bbf7d0;
       }
       .select-button:hover {
         animation: none;
+      }
+      /* Hide checkbox but keep it accessible */
+      #nav-toggle {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
       }
     </style>
   </head>
@@ -52,38 +62,38 @@
 
           <!-- Navigation Section -->
           <nav class="relative">
-            <div class="nav-container inline-block" tabindex="0">
-              <button
-                class="select-button bg-green-600 text-white px-8 py-4 rounded-lg font-semibold blinking cursor-pointer hover:bg-green-700 transition-colors w-48 text-center focus:outline-none"
-              >
-                Select
-              </button>
-              <ul
-                class="dropdown mt-2 bg-white border rounded-lg shadow-lg w-48 absolute left-0 z-10"
-              >
-                <li>
-                  <a
-                    href="#about"
-                    class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#projects"
-                    class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
-                    >Projects</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
+            <input type="checkbox" id="nav-toggle" class="peer" />
+            <label
+              for="nav-toggle"
+              class="select-button bg-green-600 text-white px-8 py-4 rounded-lg font-semibold blinking cursor-pointer hover:bg-green-700 transition-colors w-48 text-center block"
+            >
+              Select
+            </label>
+            <ul
+              class="dropdown mt-2 bg-white border rounded-lg shadow-lg w-48 absolute left-0 z-10"
+            >
+              <li>
+                <a
+                  href="#about"
+                  class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
+                  >Contact</a
+                >
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
