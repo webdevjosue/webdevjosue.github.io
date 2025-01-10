@@ -44,6 +44,10 @@
   transition: all 0.3s ease;
 }
 
+html {
+  scroll-padding-top: 100px; /* Prevents content from going under sticky nav */
+}
+
 .nav-container.sticky {
   position: fixed;
   top: 16px;

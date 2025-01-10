@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Basic sticky navigation
   const handleScroll = () => {
-    if (window.scrollY > heroSection.offsetHeight) {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > heroSection.offsetHeight) {
       nav.classList.add("sticky");
     } else {
       nav.classList.remove("sticky");
@@ -25,19 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Close menu
     navCheckbox.checked = false;
 
-    // Calculate offset based on section
-    const offset = targetId === "#contact" ? 0 : 80;
+    // Calculate proper offset including nav height
+    const navHeight = nav.offsetHeight;
+    const offset = targetId === "#contact" ? navHeight : navHeight + 32;
 
-    // Smooth scroll
+    // Smooth scroll with adjusted position
     window.scrollTo({
       top: targetSection.offsetTop - offset,
       behavior: "smooth",
     });
 
-    // Update URL after scroll completes
-    setTimeout(() => {
-      window.location.hash = targetId;
-    }, 800);
+    // Update URL without jumping
+    window.history.pushState(null, "", targetId);
   };
 
   // Event listeners
