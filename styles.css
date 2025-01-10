@@ -1,11 +1,13 @@
 .zj-section {
-  padding: 2rem;
+  padding: 4rem 2rem; /* increased padding */
   background-color: #f5f5f5;
+  margin: 3rem 0; /* added vertical margin */
 }
 
 .about-section {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem; /* increased padding */
   background-color: #ffffff;
+  margin: 3rem 0; /* added vertical margin */
 }
 
 .about-content {
@@ -23,4 +25,85 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #666;
+}
+
+/* Blinking effect */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+
+/* Navigation styles */
+.nav-container {
+  position: relative; /* Changed from fixed to relative as default state */
+  transition: all 0.3s ease;
+}
+
+.nav-container.sticky {
+  /* New class for sticky state */
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container.initial {
+  position: relative;
+  top: 0;
+  transform: none;
+  left: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.nav-checkbox {
+  display: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.nav-container.sticky .dropdown {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-checkbox:checked ~ .dropdown {
+  display: block;
+}
+
+.nav-checkbox:checked ~ .overlay {
+  display: block;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 10;
+}
+
+.select-button:hover {
+  animation: none;
 }
