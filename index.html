@@ -15,27 +15,40 @@
       .blinking {
         animation: blink 1s infinite;
       }
+      /* Navigation styles */
+      .nav-container {
+        position: relative;
+      }
+      .nav-checkbox {
+        display: none;
+      }
       .dropdown {
         display: none;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.2s, visibility 0.2s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin-top: 0.5rem;
+        background: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 20;
       }
-      #nav-toggle:checked ~ .dropdown {
+      .nav-checkbox:checked ~ .dropdown {
         display: block;
-        opacity: 1;
-        visibility: visible;
       }
-      .dropdown a:hover {
-        background-color: #bbf7d0;
+      .nav-checkbox:checked ~ .overlay {
+        display: block;
+      }
+      .overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: transparent;
+        z-index: 10;
       }
       .select-button:hover {
         animation: none;
-      }
-      /* Hide checkbox but keep it accessible */
-      #nav-toggle {
-        position: absolute;
-        clip: rect(0, 0, 0, 0);
       }
     </style>
   </head>
@@ -61,40 +74,39 @@
           </div>
 
           <!-- Navigation Section -->
-          <nav class="relative">
-            <input type="checkbox" id="nav-toggle" class="peer" />
+          <div class="nav-container">
+            <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
             <label
               for="nav-toggle"
               class="select-button bg-green-600 text-white px-8 py-4 rounded-lg font-semibold blinking cursor-pointer hover:bg-green-700 transition-colors w-48 text-center block"
             >
               Select
             </label>
-            <ul
-              class="dropdown mt-2 bg-white border rounded-lg shadow-lg w-48 absolute left-0 z-10"
-            >
-              <li>
+            <label for="nav-toggle" class="overlay"></label>
+            <div class="dropdown">
+              <label for="nav-toggle">
                 <a
                   href="#about"
                   class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
                   >About</a
                 >
-              </li>
-              <li>
+              </label>
+              <label for="nav-toggle">
                 <a
                   href="#projects"
                   class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
                   >Projects</a
                 >
-              </li>
-              <li>
+              </label>
+              <label for="nav-toggle">
                 <a
                   href="#contact"
                   class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
                   >Contact</a
                 >
-              </li>
-            </ul>
-          </nav>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
 
