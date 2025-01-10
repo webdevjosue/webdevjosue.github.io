@@ -1,0 +1,21 @@
+title: Josue Zazueta Portfolio
+email: WebDev.Josue@gmail.com
+description: Web Developer Portfolio showcasing modern and responsive websites
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
