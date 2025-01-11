@@ -1,13 +1,12 @@
 title: Josue Zazueta Portfolio
 email: WebDev.Josue@gmail.com
-description: Web Developer Portfolio showcasing modern and responsive websites
+description: Web Developer Portfolio
 baseurl: ""
-url: ""
+url: "https://webdevjosue.github.io"
 
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 # Exclude files
