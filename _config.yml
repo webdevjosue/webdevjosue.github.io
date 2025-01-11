@@ -9,6 +9,18 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
 
+# SEO settings
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+defaults:
+  - scope:
+      path: "" # all files
+    values:
+      sitemap: false
+      noindex: true
+
 # Exclude files
 exclude:
   - .sass-cache/

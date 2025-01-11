@@ -1,0 +1,16 @@
+# Prevent directory browsing
+Options -Indexes
+
+# Prevent scraping
+Header set X-Robots-Tag "noindex, nofollow"
+
+# Prevent framing
+Header always append X-Frame-Options DENY
+Header set X-Content-Type-Options "nosniff"
+
+# Block bad bots
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^.*bot.*$ [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*spider.*$ [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*crawler.*$ [NC]
+RewriteRule ^(.*)$ - [F,L]
