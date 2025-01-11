@@ -48,6 +48,29 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", (e) => {
     if (!nav.contains(e.target)) {
       navCheckbox.checked = false;
+      selectButton.classList.add("blinking");
+    }
+  });
+
+  // Add blinking state management
+  const selectButton = document.querySelector(".select-button");
+
+  selectButton.addEventListener("mouseenter", () => {
+    selectButton.classList.remove("blinking");
+  });
+
+  selectButton.addEventListener("mouseleave", () => {
+    if (!navCheckbox.checked) {
+      selectButton.classList.add("blinking");
+    }
+  });
+
+  document.querySelector(".dropdown").addEventListener("click", (e) => {
+    if (e.target.matches("a")) {
+      // Resume blinking after navigation
+      setTimeout(() => {
+        selectButton.classList.add("blinking");
+      }, 100);
     }
   });
 });
