@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Josue Zazueta, showcasing web development projects and expertise."
+    />
     <title>Josue Zazueta Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
@@ -15,53 +19,49 @@
       </header>
 
       <!-- Hero and Navigation Section -->
-      <div id="hero" class="flex justify-center py-8 px-4 md:px-8">
+      <div id="hero" class="flex justify-center py-8 px-4 md:px-8 lg:py-12">
         <div
           class="inline-flex flex-col md:flex-row items-center justify-between w-full max-w-3xl"
         >
           <!-- Hero Image Section -->
-          <div class="w-32 md:w-40 lg:w-48 mb-6 md:mb-0 md:mr-8">
+          <div
+            class="w-32 md:w-40 lg:w-48 mb-6 md:mb-0 md:mr-8 lg:mr-hero-lg p-2 md:p-hero"
+          >
             <img
               src="img/avatarholder.png"
-              alt="Avatar"
+              alt="Avatar image of Josue Zazueta"
               class="rounded-full shadow-lg w-full h-auto"
             />
           </div>
 
           <!-- Navigation Section -->
-          <div class="nav-container">
-            <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+          <nav
+            class="nav-container"
+            role="navigation"
+            aria-label="Main navigation"
+          >
+            <input
+              type="checkbox"
+              id="nav-toggle"
+              class="nav-checkbox sr-only"
+              aria-label="Toggle navigation menu"
+            />
             <label
               for="nav-toggle"
-              class="select-button bg-green-600 text-white px-8 py-4 rounded-lg font-semibold blinking cursor-pointer hover:bg-green-700 transition-colors w-48 text-center block shadow-lg hover:shadow-xl"
+              class="select-button bg-green-600 text-white px-8 py-4 rounded-lg font-semibold cursor-pointer hover:bg-green-700 transition-all duration-300 w-48 text-center block shadow-lg hover:shadow-xl"
+              aria-label="Open navigation menu"
             >
               Select
             </label>
-            <label for="nav-toggle" class="overlay"></label>
-            <div class="dropdown">
-              <label for="nav-toggle">
-                <a
-                  href="#about"
-                  class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
-                  >About</a
-                >
-              </label>
-              <label for="nav-toggle">
-                <a
-                  href="#zj-project"
-                  class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
-                  >Projects</a
-                >
-              </label>
-              <label for="nav-toggle">
-                <a
-                  href="#contact"
-                  class="text-xl font-bold hover:bg-green-200 block py-2 px-4 text-center"
-                  >Contact</a
-                >
-              </label>
-            </div>
-          </div>
+            <div class="overlay" aria-hidden="true"></div>
+            <nav class="dropdown" role="menu">
+              <ul class="space-y-2 p-2">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#zj-project" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </nav>
         </div>
       </div>
       <!-- About Section -->
@@ -72,12 +72,37 @@
         <div class="about-content text-center space-y-6">
           <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">About Me</h2>
           <p
-            class="text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
+            class="content-text text-gray-700 text-base md:text-lg max-w-2xl mx-auto"
           >
             I am a passionate web developer with expertise in creating modern
             and responsive websites. With a focus on clean code and UX, I bring
             ideas to life through innovative web solutions.
           </p>
+          <!-- add a section for title: where i come from: align right paragraph with image on the left side. "Growing up in a mechanic shop, i learnt great customer service and mechanical mindset. How problem solving involved reading a book or knowledge to solve problems. Advantages experience to provide creative solutions."
+          <figure class="about-image">
+            <img
+              src="img/avatarholder.png"
+              alt="Josue Zazueta in front of a computer"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-gray-700">
+              <h1 class="text-xl font-bold mb-4 text-gray-900">
+                Where I Come From
+              </h1>
+              <div
+                class="flex flex-col md:flex-row items-center md:items-start"
+              ></div>
+                <p class="text-right text-gray-700 text-base md:text-lg leading-relaxed"></p>
+                Growing up in a mechanic shop, I gained valuable insights into
+                customer service and developed a strong mechanical mindset. I
+                learned that problem-solving often meant diving into a manual or
+                seeking knowledge to tackle challenges head-on. This hands-on
+                experience taught me how to provide creative and practical
+                solutions, combining technical expertise with a commitment to
+                excellent service.
+                </p> -->
+            </figcaption>
+          </figure>
         </div>
       </section>
       <!-- ZJ Middle Section -->
@@ -85,11 +110,11 @@
         id="zj-project"
         class="zj-section py-16 md:py-24 px-4 md:px-8 max-w-4xl mx-auto mt-12 space-y-8"
       >
-        <div class="zj-content text-center space-y-6">
+        <figure class="zj-content text-center space-y-6">
           <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">
             Project: ZJ
           </h2>
-          <div
+          <figcaption
             class="text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl mx-auto space-y-4"
           >
             <p>
@@ -101,8 +126,8 @@
               Software: Github Pages, VSCode, Jekyll, Ruby, HTML, CSS, JS,
               TailwindCSS, and more.
             </p>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </section>
 
       <!-- ZJ Bottom Section -->
@@ -135,7 +160,8 @@
         </h2>
         <a
           href="mailto:WebDev.Josue@gmail.com"
-          class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg text-lg md:text-xl font-bold hover:bg-green-700 transition-colors"
+          class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg text-lg md:text-xl font-bold hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all duration-300"
+          aria-label="Send email to WebDev.Josue@gmail.com"
           >Email Me</a
         >
       </section>
@@ -143,7 +169,9 @@
 
     <!-- Footer Section -->
     <footer class="text-center py-6 bg-gray-100 mt-8">
-      <p class="text-gray-600">Josue Zazueta LLC &copy;</p>
+      <p class="text-gray-600">
+        Josue Zazueta LLC &copy; <span id="current-year"></span>
+      </p>
     </footer>
     <script src="js/main.js"></script>
   </body>

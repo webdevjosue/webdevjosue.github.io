@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector(".nav-container");
   const heroSection = document.querySelector("#hero");
   const navCheckbox = document.getElementById("nav-toggle");
+  const overlay = document.querySelector(".overlay");
+  const navLinks = document.querySelectorAll(".nav-link");
 
   // Basic sticky navigation
   const handleScroll = () => {
@@ -43,6 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listeners
   window.addEventListener("scroll", handleScroll);
   document.querySelector(".dropdown").addEventListener("click", handleNavClick);
+
+  // Close menu when clicking overlay
+  overlay.addEventListener("click", function () {
+    navCheckbox.checked = false;
+  });
+
+  // Close menu when clicking a link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      navCheckbox.checked = false;
+    });
+  });
 
   // Close menu when clicking outside
   document.addEventListener("click", (e) => {
