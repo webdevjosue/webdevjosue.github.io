@@ -19,6 +19,7 @@
 .about-content h2 {
   margin-bottom: 1.5rem;
   color: #333;
+  text-align: center;
 }
 
 .about-content p {
@@ -196,10 +197,15 @@ html {
 
   .about-image figcaption {
     flex: 1;
-    text-align: left;
+    text-align: left; /* Changed from justify to left */
     font-size: 1.1rem;
     line-height: 1.8;
     padding-right: 1rem;
+  }
+
+  .about-image figcaption h1 {
+    text-align: left; /* Keep the heading left-aligned */
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -238,4 +244,38 @@ html {
   .dropdown ul {
     padding: 0.5rem;
   }
+}
+
+/* Update paragraph text alignment globally except footer */
+p:not(footer p) {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Keep headings centered */
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+/* Keep footer text centered */
+footer p {
+  text-align: center;
+}
+
+/* Override text alignment for specific cases */
+.about-content h2,
+.zj-content h2 {
+  text-align: center;
+}
+
+.about-image figcaption h1 {
+  text-align: left;
+}
+
+/* Keep navigation text centered */
+.nav-link {
+  text-align: center;
 }
