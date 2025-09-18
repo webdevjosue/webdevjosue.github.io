@@ -18,8 +18,8 @@ defaults:
   - scope:
       path: "" # all files
     values:
-      sitemap: false
-      noindex: true
+      sitemap: true
+      noindex: false
 
 # Exclude files
 exclude:
@@ -30,3 +30,5 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
+  - .claude/
+  - docs/
