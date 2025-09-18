@@ -1,15 +1,114 @@
-.zj-section {
-  padding: 4rem 2rem; /* increased padding */
-  background-color: #f5f5f5;
-  margin: 3rem 0; /* added vertical margin */
+/* Enhanced Project Section */
+#projects {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+.project-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #10b981;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Skills Section */
+.skill-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #10b981, #3b82f6) border-box;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* About Section */
 .about-section {
-  padding: 6rem 2rem; /* increased padding */
-  background-color: #ffffff;
-  margin: 3rem 0; /* added vertical margin */
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  margin: 3rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Navigation Enhancements */
+.select-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.select-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.select-button:hover::before {
+  left: 100%;
+}
+
+/* Contact Section */
+.contact-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Footer */
+footer a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #10b981;
+  transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+/* Base styles */
 .about-content {
   max-width: 800px;
   margin: 0 auto;
@@ -26,6 +125,27 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #666;
+}
+
+/* Add missing utility classes */
+.skill-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.project-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Blinking effect */
@@ -166,9 +286,326 @@ html {
   }
 }
 
-/* Enhanced typography */
+/* Enhanced typography and responsive design improvements */
+
+/* Base typography improvements - Applied Research Findings */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fluid typography for headings - Research Implementation */
+h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw + 0.25rem, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.4;
+  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+/* Improved body text readability - 50-75 characters optimal line length */
+p {
+  font-size: clamp(1rem, 2vw + 0.25rem, 1.125rem);
+  line-height: 1.6;
+  max-width: 70ch;
+  margin: 0 auto 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Enhanced readability for smaller screens */
+@media (max-width: 768px) {
+  p {
+    max-width: 90%;
+    text-align: left;
+    text-justify: none;
+    hyphens: none;
+  }
+}
+
+/* Responsive footer layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Touch-friendly interactive elements - WCAG 48px minimum */
+.select-button,
+.contact-card a,
+.project-card a,
+footer a,
+.nav-link {
+  min-height: 48px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+/* Enhanced touch targets for navigation */
+.nav-link {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem;
+}
+
+/* Ensure proper spacing between touch targets */
+.nav-link + .nav-link {
+  margin-top: 0.5rem;
+}
+
+/* Enhanced responsive navigation */
+@media (max-width: 768px) {
+  .nav-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .select-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .dropdown {
+    width: calc(100% - 2rem);
+    max-width: 300px;
+  }
+}
+
+/* Improved responsive spacing - Mobile-first approach */
+section {
+  padding: clamp(2rem, 5vw, 3rem) 1rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+    margin-bottom: clamp(3rem, 8vw, 6rem);
+  }
+}
+
+/* Enhanced responsive container widths */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 2rem;
+  }
+}
+
+/* Performance optimizations and layout stability */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent layout shifts with aspect ratio */
+.project-card img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* Enhanced loading states */
+.select-button,
+.project-card,
+.skill-card,
+.contact-card {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus visible for better accessibility */
+:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Enhanced utility classes */
 .content-text {
-  @apply leading-relaxed tracking-wide;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* Styled collaboration section */
+.collaboration-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 50%, #faf5ff 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.collaboration-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.collaboration-card:hover::before {
+  left: 100%;
+}
+
+.collaboration-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* Animated divider lines */
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.divider-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.6), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Individual collaboration items */
+.collaboration-item {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.collaboration-item:hover {
+  transform: scale(1.02);
+}
+
+.collaboration-item .emoji {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.collaboration-item:hover .emoji {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Enhanced call-to-action button */
+.cta-button {
+  background: linear-gradient(135deg, #dcfce7 0%, #dbeafe 100%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover::before {
+  opacity: 1;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.cta-button .emoji {
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover .emoji {
+  transform: scale(1.2) rotate(5deg);
 }
 
 /* About image section styles */

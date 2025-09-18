@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "video": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-video"],
+      "env": {}
+    }
+  }
+}

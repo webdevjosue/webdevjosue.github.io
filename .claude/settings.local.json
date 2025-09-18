@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Read(//e/WebDevProjects/githubpage/webdevjosueprofile/**)",
+      "WebFetch(domain:docs.z.ai)",
+      "mcp__filesystem__read_text_file",
+      "mcp__filesystem__edit_file",
+      "Bash(echo:*)",
+      "mcp__filesystem__list_directory",
+      "Read(//c/Users/Josue/AppData/Roaming/Claude/**)",
+      "Bash(claude mcp add:*)",
+      "WebFetch(domain:developers.google.com)",
+      "WebFetch(domain:web.dev)",
+      "WebFetch(domain:css-tricks.com)",
+      "WebFetch(domain:www.smashingmagazine.com)",
+      "WebFetch(domain:www.w3.org)",
+      "WebFetch(domain:fonts.google.com)",
+      "mcp__filesystem__create_directory",
+      "mcp__fetch-mcp__fetch_html",
+      "mcp__memory__add_observations",
+      "mcp__memory__create_entities",
+      "mcp__memory__create_relations",
+      "mcp__memory__open_nodes"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
