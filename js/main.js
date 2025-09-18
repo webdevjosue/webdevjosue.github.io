@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.querySelector(".overlay");
   const navLinks = document.querySelectorAll(".nav-link");
 
+  // Scroll to top function
+  window.scrollToTop = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   // Basic sticky navigation
   const handleScroll = () => {
     const scrollPosition = window.scrollY;

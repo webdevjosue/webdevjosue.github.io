@@ -5,13 +5,24 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Mobile-first responsive design for project cards */
 .project-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  height: auto;
+  min-height: 520px;
+  max-height: 680px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   border-color: #10b981;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
@@ -82,12 +93,63 @@
   transition: all 0.3s ease;
 }
 
+.contact-card .flex {
+  align-items: center;
+}
+
+.contact-card .flex.items-start {
+  align-items: flex-start;
+}
+
+.contact-card .flex span:first-child {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card .flex span:last-child {
+  flex: 1;
+  line-height: 1.4;
+}
+
 .contact-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Footer */
+/* Simple Footer Styles */
+footer {
+  background-color: #111827;
+  margin-top: 4rem;
+}
+
+footer h3 {
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
 footer a {
   position: relative;
   transition: color 0.3s ease;
@@ -104,8 +166,76 @@ footer a::after {
   transition: width 0.3s ease;
 }
 
+footer a:hover {
+  color: #10b981;
+}
+
 footer a:hover::after {
   width: 100%;
+}
+
+/* Specific styling for footer connect links to prevent underline overflow */
+footer .connect-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+footer .connect-link::after {
+  left: 0;
+  width: 0;
+  max-width: 100%;
+}
+
+footer .connect-link:hover::after {
+  width: 100%;
+}
+
+footer .border-t {
+  border-color: #374151;
+}
+
+footer .text-gray-400 {
+  color: #9ca3af;
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer .grid {
+    gap: 2rem;
+  }
+
+  footer h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  footer .text-center {
+    text-align: center !important;
+  }
+
+  footer .md\\:text-left,
+  footer .md\\:text-right {
+    text-align: center !important;
+  }
+
+  footer .md\\:justify-start,
+  footer .md\\:justify-end {
+    justify-content: center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 /* Base styles */
@@ -133,13 +263,175 @@ footer a:hover::after {
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  text-align: center;
 }
 
-.project-card {
-  background: white;
-  border-radius: 0.75rem;
+.skill-card p {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+  line-height: 1.6;
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Skill card responsive adjustments */
+@media (max-width: 640px) {
+  .skill-card {
+    padding: 1.25rem;
+  }
+
+  .skill-card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding: 0.375rem 0;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .skill-card p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    padding: 0.4375rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill-card p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    padding: 0.5rem 0;
+  }
+}
+
+
+/* Mobile: < 640px */
+@media (max-width: 640px) {
+  .project-card {
+    min-height: 480px;
+    max-height: 560px;
+    margin-bottom: 1rem;
+  }
+
+  .project-card .h-64 {
+    height: 180px;
+    flex-shrink: 0;
+  }
+
+  .project-card .p-6 {
+    padding: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+    min-height: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card .flex-wrap {
+    margin-bottom: 1rem;
+  }
+
+  .project-card .flex {
+    gap: 0.5rem;
+  }
+
+  .project-card .flex a {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet: 640px - 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .project-card {
+    min-height: 540px;
+    max-height: 620px;
+  }
+
+  .project-card .h-64 {
+    height: 200px;
+  }
+
+  .project-card h3 {
+    font-size: 1.375rem;
+    min-height: 2.25rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+  .project-card {
+    height: 600px;
+    margin-bottom: 0;
+  }
+
+  .project-card .h-64 {
+    height: 240px;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+    min-height: 2.5rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+    -webkit-line-clamp: 4;
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* Shared styles for all screen sizes */
+.project-card .h-64 {
+  flex-shrink: 0;
+}
+
+.project-card .p-6 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.project-card h3 {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.project-card p {
+  color: #4b5563;
+  flex: 1;
   overflow: hidden;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.project-card .flex-wrap {
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.project-card .flex {
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .contact-card {
@@ -297,6 +589,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Fluid typography for headings - Research Implementation */
@@ -492,6 +785,112 @@ html {
 .content-text {
   line-height: 1.6;
   letter-spacing: 0.01em;
+}
+
+/* Project Card Template - For Future Projects */
+.project-card-template {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+}
+
+.project-card-template:hover {
+  transform: translateY(-8px);
+  border-color: #10b981;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.project-card-template .project-image {
+  height: 240px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #8b5cf6 100%);
+}
+
+.project-card-template .project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.project-card-template .project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  min-height: 2.5rem;
+  color: #1f2937;
+}
+
+.project-card-template .project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.project-card-template .project-tags {
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-card-template .project-links {
+  margin-top: auto;
+  flex-shrink: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-card-template .project-tag {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.project-card-template .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.project-card-template .project-link.primary {
+  background: #10b981;
+  color: white;
+}
+
+.project-card-template .project-link.primary:hover {
+  background: #059669;
+}
+
+.project-card-template .project-link.secondary {
+  background: #1f2937;
+  color: white;
+}
+
+.project-card-template .project-link.secondary:hover {
+  background: #111827;
 }
 
 /* Styled collaboration section */
@@ -702,6 +1101,33 @@ h3 {
 /* Keep footer text centered */
 footer p {
   text-align: center;
+}
+
+/* Ensure all centered text stays centered on all devices */
+.text-center {
+  text-align: center !important;
+}
+
+/* Specifically ensure contact section fun fact stays centered */
+#contact .text-center {
+  text-align: center !important;
+}
+
+#contact p.text-center {
+  text-align: center !important;
+}
+
+/* Ensure the specific fun fact paragraph stays centered on all devices */
+#contact p.text-sm.text-gray-500.mt-6.text-center.font-medium {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Force centering for any element with text-center class in contact section */
+#contact .text-center,
+#contact *[class*="text-center"] {
+  text-align: center !important;
 }
 
 /* Override text alignment for specific cases */

@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-white font-sans" style="font-family: 'Inter', sans-serif;">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header Section -->
       <header class="text-center py-8 md:py-12">
         <div class="mb-4">
@@ -38,7 +38,7 @@
       </header>
 
       <!-- Hero and Navigation Section -->
-      <div id="hero" class="flex flex-col items-center py-8 px-4 md:px-8 lg:py-12">
+      <div id="hero" class="flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 lg:py-12">
         <div
           class="flex flex-col items-center w-full max-w-2xl lg:max-w-3xl"
         >
@@ -87,7 +87,7 @@
       <!-- About Section -->
       <section
         id="about"
-        class="about-section py-16 md:py-24 px-4 md:px-8 max-w-6xl mx-auto space-y-8"
+        class="about-section py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-8"
       >
         <div class="about-content text-center space-y-6">
           <div class="inline-block relative mb-6">
@@ -126,7 +126,7 @@
         </div>
       </section>
       <!-- Skills Section -->
-      <section id="skills" class="py-16 md:py-24 px-4 md:px-8 max-w-6xl mx-auto">
+      <section id="skills" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <div class="inline-block relative mb-6">
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-orange-500 via-blue-500 to-green-500 bg-clip-text text-transparent mb-4 relative z-10">
@@ -166,7 +166,7 @@
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="py-16 md:py-24 px-4 md:px-8 max-w-6xl mx-auto bg-gray-50 rounded-3xl">
+      <section id="projects" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-50 rounded-3xl">
         <div class="text-center mb-12">
           <div class="inline-block relative mb-6">
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 relative z-10">
@@ -182,7 +182,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-12 place-items-center">
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12 place-items-center">
           <!-- Portfolio Website Project -->
           <div class="project-card">
             <div class="h-64 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded-t-lg"></div>
@@ -266,7 +266,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-16 md:py-24 px-4 md:px-8 max-w-4xl mx-auto">
+      <section id="contact" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div class="text-center mb-12">
           <div class="inline-block relative mb-6">
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-600 via-teal-600 to-green-600 bg-clip-text text-transparent mb-4 relative z-10">
@@ -338,15 +338,18 @@
 
     <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-12 mt-16">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8 mb-8 footer-grid">
-          <div class="footer-section text-center md:text-left">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <!-- About Section -->
+          <div class="text-center md:text-left">
             <h3 class="text-xl font-bold mb-4 text-green-400">Web Dev Josue</h3>
             <p class="text-gray-300">
               Creating innovative web solutions with modern technologies and clean code.
             </p>
           </div>
-          <div class="footer-section text-center">
+
+          <!-- Quick Links Section -->
+          <div class="text-center">
             <h3 class="text-xl font-bold mb-4 text-green-400">Quick Links</h3>
             <ul class="space-y-2">
               <li><a href="#about" class="text-gray-300 hover:text-green-400 transition-colors">About</a></li>
@@ -355,20 +358,24 @@
               <li><a href="#contact" class="text-gray-300 hover:text-green-400 transition-colors">Contact</a></li>
             </ul>
           </div>
-          <div class="footer-section text-center md:text-right">
+
+          <!-- Connect Section -->
+          <div class="text-center">
             <h3 class="text-xl font-bold mb-4 text-green-400">Connect</h3>
-            <div class="space-y-2 md:justify-end md:flex md:flex-col md:items-end">
-              <a href="mailto:WebDev.Josue@gmail.com" class="flex items-center gap-2 text-gray-300 hover:text-green-400 transition-colors justify-center md:justify-start">
+            <div class="space-y-2 flex flex-col items-center">
+              <a href="mailto:WebDev.Josue@gmail.com" class="connect-link flex items-center gap-2 text-gray-300 hover:text-green-400 transition-colors">
                 <span>📧</span>
                 WebDev.Josue@gmail.com
               </a>
-              <div class="flex items-center gap-2 text-gray-300 justify-center">
+              <a href="#" onclick="scrollToTop()" class="connect-link flex items-center gap-2 text-gray-300 hover:text-green-400 transition-colors">
                 <span>🌐</span>
                 webdevjosue.github.io
-              </div>
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- Footer Bottom -->
         <div class="border-t border-gray-700 pt-8 text-center">
           <p class="text-gray-400">
             &copy; <span id="current-year"></span> Josue Zazueta LLC. Built with passion and modern web technologies.
