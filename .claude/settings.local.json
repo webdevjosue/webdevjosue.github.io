@@ -23,7 +23,11 @@
       "mcp__memory__create_relations",
       "mcp__memory__open_nodes",
       "mcp__filesystem__read_file",
-      "mcp__filesystem__write_file"
+      "mcp__filesystem__write_file",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
