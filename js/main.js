@@ -70,28 +70,60 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", (e) => {
     if (!nav.contains(e.target)) {
       navCheckbox.checked = false;
-      selectButton.classList.add("blinking");
+      // Reset button text when menu closes
+      selectButton.textContent = originalText;
     }
   });
 
-  // Add blinking state management
-  const selectButton = document.querySelector(".select-button");
+  // Close menu when clicking overlay
+  overlay.addEventListener("click", function () {
+    navCheckbox.checked = false;
+    // Reset button text when menu closes
+    selectButton.textContent = originalText;
+  });
 
+  // Close menu when clicking a link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      navCheckbox.checked = false;
+      // Reset button text when menu closes
+      selectButton.textContent = originalText;
+    });
+  });
+
+  // Simple animation management
+  const selectButton = document.querySelector(".select-button");
+  const originalText = "Select";
+  const activeText = "Menu";
+
+  // Toggle button text based on menu state
+  const updateButtonText = () => {
+    if (navCheckbox.checked) {
+      selectButton.textContent = activeText;
+    } else {
+      selectButton.textContent = originalText;
+    }
+  };
+
+  // Listen for checkbox changes to update text
+  navCheckbox.addEventListener("change", updateButtonText);
+
+  // Pause animation on hover
   selectButton.addEventListener("mouseenter", () => {
-    selectButton.classList.remove("blinking");
+    selectButton.style.animation = 'none';
   });
 
   selectButton.addEventListener("mouseleave", () => {
     if (!navCheckbox.checked) {
-      selectButton.classList.add("blinking");
+      selectButton.style.animation = '';
     }
   });
 
+  // Resume animation after navigation
   document.querySelector(".dropdown").addEventListener("click", (e) => {
     if (e.target.matches("a")) {
-      // Resume blinking after navigation
       setTimeout(() => {
-        selectButton.classList.add("blinking");
+        selectButton.style.animation = '';
       }, 100);
     }
   });

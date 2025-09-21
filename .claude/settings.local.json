@@ -29,7 +29,21 @@
       "Bash(git commit:*)",
       "Bash(cat:*)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:www.pepewebtech.com)"
+      "WebFetch(domain:www.pepewebtech.com)",
+      "Bash(cmd:*)",
+      "Bash(powershell -Command \"[Environment]::GetFolderPath(''ApplicationData'')\")",
+      "Read(//c/Users/Josue/AppData/Roaming/**)",
+      "WebFetch(domain:docs.claude.com)",
+      "Bash(claude mcp list:*)",
+      "Bash(Get-Command claude -ErrorAction SilentlyContinue)",
+      "Read(//c/Users/Josue/.npm-global//**)",
+      "Bash(npm:*)",
+      "Bash(where:*)",
+      "mcp__web-search-prime__webSearchPrime",
+      "mcp__playwright-mcp__playwright_navigate",
+      "mcp__playwright-mcp__playwright_screenshot",
+      "Bash(curl:*)",
+      "mcp__zai-mcp-server__analyze_image"
     ],
     "deny": [],
     "ask": []

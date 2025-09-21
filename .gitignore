@@ -2,9 +2,9 @@
 # Add files and directories that should not be tracked by Git
 
 # Documentation and research folders (internal use)
-docs/
+/docs/
 *.md
-.claude/
+/.claude/
 
 # Dependencies
 node_modules/
